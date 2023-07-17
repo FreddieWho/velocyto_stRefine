@@ -86,6 +86,9 @@ def id_generator(size: int=6, chars: str=string.ascii_uppercase + string.digits)
 @click.option("--samtools-threads", "-@",
               help="The number of threads to use to sort the bam by cellID file using samtools",
               default=16)
+@click.option("--samtools-t", "-T",
+              help="Write temporary files to PREFIX.nnnn.bam",
+              default='~/tmp')
 @click.option("--samtools-memory",
               help="The number of MB used for every thread by samtools to sort the bam file",
               default=2048)
